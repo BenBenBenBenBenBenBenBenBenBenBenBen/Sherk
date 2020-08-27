@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main %}
+<form method="POST" action="/profile" >
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-md-3">
+            <h1>Profile</h1>
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputfirstname1">First name</label>
+                  <input type="text" name="firstname" class="form-control" id="exampleInputfirstname1" placeholder="First name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputlastname1">Last name</label>
+                  <input type="text" name="lastname" class="form-control" id="exampleInputlastname1" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Change email address</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Change password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password Confirm</label>
+                  <input type="password" name="passwordConfirm" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                  <input type="file" name="avatar">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Save password</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock %}
