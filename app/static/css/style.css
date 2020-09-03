@@ -18,3 +18,7 @@ img {
     width: 120px;
     height: auto;
 }
+
+body {
+    background: url(../img/ussr.png);
+}
