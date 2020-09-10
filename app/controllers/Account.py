@@ -8,10 +8,14 @@ bp = Blueprint('account', __name__, url_prefix='', static_folder='../static')
 def register():
     """ 
     Registration controller. 
+  
     Presents the registration view and handles registration requests. 
+  
     Returns: 
     obj: Either render_template or redirect
+  
     """
+
     if request.method == 'POST':
         error = None
         try:
@@ -29,9 +33,10 @@ def register():
             return redirect(url_for('account.login'))
 
     return render_template('account/register.html')
-
+    
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
+    
     if request.method == 'POST':
         error = None
         try:
@@ -44,11 +49,12 @@ def login():
         else:
             flash("Welcome back!")
             return redirect(url_for('account.profile'))
-            
-    return render_template('account/login.html')
 
+    return render_template('account/login.html')
+    
 @bp.route('/profile', methods=['GET', 'POST'])
 def profile():
+
     if request.method == 'POST':
         error = None
         try:
@@ -59,6 +65,7 @@ def profile():
             error = err
         if error:
             flash(str(error))
+
     return render_template('account/profile.html')
     
 @bp.route('/logout')

@@ -15,10 +15,21 @@
 }
 
 img {
-    width: 120px;
+    width: 539px;
     height: auto;
+    border-radius: 5px;
 }
 
 body {
     background: url(../img/ussr.png);
+}
+
+.home {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+.thing{
+    text-align: center;
 }

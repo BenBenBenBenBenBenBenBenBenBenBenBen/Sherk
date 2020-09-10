@@ -8,6 +8,7 @@ class Account():
 
     def __init__(self):
         self.user = User()
+        return None
 
     def register(self, request):
         """ 
@@ -92,6 +93,9 @@ class Account():
             first_name = request.form['firstname']
             last_name = request.form['lastname']
 
+            flask_app.logger.info('############# FILES ##############')
+            flask_app.logger.info(request.files)
+
             error = None
             if not first_name:
                 error = 'A first name is required.'
@@ -101,7 +105,6 @@ class Account():
                 if 'avatar' in request.files:
                     file = request.files['avatar']
                     if file.filename:
-                        flask_app.logger.info(file)
                         uploader = Upload()
                         avatar = uploader.upload(file, session['user']['localId'])
                         session['user']['avatar'] = avatar
