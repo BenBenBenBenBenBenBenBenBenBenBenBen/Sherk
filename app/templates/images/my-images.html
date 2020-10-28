@@ -3,7 +3,7 @@
     <div id="images" class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<h2>{{ title }}</h2>
+				<h2>{{ title }}</h2><br>
 				{% with messages = get_flashed_messages() %}
 					{# Handle messages here #}
 				{% endwith %}
@@ -14,7 +14,7 @@
 						<div class="grid-item" data-image='{{ image|tojson }}'>
 							<img src="{{ image.upload_location }}" alt="{{ image.description }}"><br>
 							<a href="/images/edit/{{ image.id }}"><i class="fas fa-edit"></i></a>
-							<a href="/images/delete/{{ image.id }}"><i class="fas fa-trash-alt"></i></a>
+							<a href="/images/delete/{{ image.id }}"><i class="fas fa-trash-alt"></i></a><br><br>
 						</div>
 						{% endwith %}
 					{% endfor %}

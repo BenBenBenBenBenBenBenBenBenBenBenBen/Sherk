@@ -5,6 +5,13 @@
     <div class="row">
         <div class="col-6 offset-md-3">
             <h1>Register</h1>
+            {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p id="warnings">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
             <form>
                 <div class="form-group">
                   <label for="exampleInputfirstname1">First name</label>

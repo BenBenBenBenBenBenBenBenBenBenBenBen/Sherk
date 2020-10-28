@@ -14,11 +14,6 @@
     text-align: center;
 }
 
-img {
-    width: 539px;
-    height: auto;
-    border-radius: 5px;
-}
 
 body {
     background: url(../img/ussr.png);
@@ -59,4 +54,28 @@ body {
 
 .dropdown-item {
     color: white;
+}
+.bitch{
+    background: url(https://i.kym-cdn.com/entries/icons/mobile/000/024/822/12c-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.grid-item{
+    width: 300px;
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 16px
+}
+.img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+.size{
+    width: 420px;
+    height: auto;
+    border-radius: 5px;
 }
