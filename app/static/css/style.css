@@ -9,27 +9,21 @@
     font-size: 8rem;
     margin-top: 2rem;
 }
-
 .form{
     text-align: center;
 }
-
-
 body {
     background: url(../img/ussr.png);
     color: black;
 }
-
 .home {
     font-size: 100px;
     text-align: center;
     color: black;
 }
-
 .thing{
     text-align: center;
 }
-
 .modal {
     position: fixed;
     top: 0;
@@ -41,7 +35,6 @@ body {
     overflow: hidden;
     outline: 0;
 }
-
 .modal-body img{
     position: relative;
     width: 100%;
@@ -51,7 +44,6 @@ body {
     position: relative;
     left: 1%;
 }
-
 .dropdown-item {
     color: white;
 }
@@ -70,7 +62,7 @@ body {
     padding-left: 16px
 }
 .img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 5px;
 }

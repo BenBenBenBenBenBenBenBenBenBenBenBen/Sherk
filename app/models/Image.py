@@ -6,15 +6,35 @@ from flask import current_app as flask_app
 import uuid, time
 
 class Image():
+    """ 
+    Image Model. 
+  
+    Class that takes image handing requests from routes/controllers, 
+    processes the data, and send the data to the matching database method. 
 
+    It also retunrs the result in a human readbale format.
+  
+    """
     def __init__(self):
+        """ 
+        Empty initialisation of class
+    
+        """
         return None
 
     def get_images(self, limit=20):
-        
+        """ 
+        Simple DB call to get X number of images,
+        with a default image limit of 20.  
+
+        Returns a Pyrebase object which may, 
+        or may not contain results.
+    
+        """
+        # Set variable defaults.
         error = None
         images = False
-
+        # Try to fetch images from DB.
         try:
             database = Database()
             images = database.get_images(limit)

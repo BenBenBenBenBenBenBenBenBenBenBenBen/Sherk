@@ -4,6 +4,9 @@
     <div class="row">
         <div class="col-6 offset-md-3">
             <h1>Profile</h1>
+            {% with messages = get_flashed_messages() %}
+					{# Handle messages here #}
+				{% endwith %}
             <form method="POST" action="/profile" enctype="multipart/form-data">
               <div class="form-group">
                 <label>First name</label>

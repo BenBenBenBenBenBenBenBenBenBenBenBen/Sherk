@@ -61,7 +61,7 @@ class Database():
     def get_category_images(self, category, limit=20):
         try:
             images = self.db.child("images").order_by_child("category").equal_to(category).limit_to_first(limit).get()
-
+#
             if isinstance(images.val(), OrderedDict):
                 return images
             else:
