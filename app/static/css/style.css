@@ -52,22 +52,18 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-}
+    background-size: cover;}
 .grid-item{
     width: 300px;
     height: 300px;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 16px
-}
+    padding-left: 16px}
 .img {
     width: 250px;
     height: auto;
-    border-radius: 5px;
-}
+    border-radius: 5px;}
 .size{
     width: 420px;
     height: auto;
-    border-radius: 5px;
-}
+    border-radius: 5px;}

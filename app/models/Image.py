@@ -38,7 +38,7 @@ class Image():
         try:
             database = Database()
             images = database.get_images(limit)
-
+        # Capture DB error.
         except Exception as err:
             flask_app.logger.info(err)
             error = err
@@ -62,8 +62,10 @@ class Image():
             error = err
 
         if error:
+            # Pass DB error back to controller.
             raise Exception(error)
         else:
+            # successfully returned Pyrebase.
             return images
 
     def get_image(self, image_id):
