@@ -12,7 +12,9 @@
 				{% for image_object in images.each() %}
 					{% with image = image_object.val() %}
 						<div class="grid-item" data-image='{{ image|tojson }}'>
-							<img src="{{ image.upload_location }}" alt="{{ image.description }}"><br>
+							<figure class="filter-{{ image.filter }}">
+								<img class="img" src="{{ image.upload_location }}" alt="{{ image.description }}">
+							</figure>
 							<a href="/images/edit/{{ image.id }}"><i class="fas fa-edit"></i></a>
 							<a href="/images/delete/{{ image.id }}"><i class="fas fa-trash-alt"></i></a><br><br>
 						</div>

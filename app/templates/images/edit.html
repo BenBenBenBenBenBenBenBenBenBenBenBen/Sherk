@@ -17,11 +17,11 @@
 						</div>
 						<div class="form-group">
 							<label>Description</label>
-							<input type="text" name="description" class="form-control" required/>
+							<input type="text" name="description" value="{{ image.description }}" class="form-control" required/>
 						</div>
 						<div class="form-group">
 							<label>Tags - add a comma after each tag.</label>
-							<input type="text" name="tags" class="form-control" required/>
+							<input type="text" name="tags" class="form-control" value="{{ image.description }}" required/>
 						</div>
 						<div class="form-group">
 							<label>Categories</label>
@@ -99,7 +99,7 @@
 							</select>
 						</div>
 						<figure class="filter-{{ image.filter }}">
-							<img class="size" src="{{ image.upload_location }}" alt="{{ image.description }}">
+							<img class="size1" src="{{ image.upload_location }}" alt="{{ image.description }}">
 						</figure><br>
 						<input type="hidden" name="image_id" value="{{ image.id }}"/>
 						<input type="hidden" name="upload_location" value="{{ image.upload_location }}"/>
